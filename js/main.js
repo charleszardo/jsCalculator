@@ -1,29 +1,58 @@
 $(document).ready(function(){
-	var total = 0;
 	var currentOp = null;
 	var num1 = null;
 	var num2 = null;
+	var onNum = null;
 	
 	function performOp(op, num1, num2) {
-		
+		num1 = parseFloat(num1);
+		num2 = parseFloat(num2);
+		switch (op) {
+			case "+": return num1 + num2;
+			case "-": return num1 - num2;
+			case "/": return num1 / num2;
+			case "x": return num1 * num2;
+		}
 	}
 	
-	var $button = $(".calculator li");
-	$button.click(function() {
-		var thisClass = $(this).attr("class");
-		var thisValue = $(this).attr("id");
-		if (thisClass === "num") {
-			if (!num1) {
-				num1 = thisValue;
-			} else {
-				num2 = thisValue;
-			}g
+	function updateTotal() {
+		$total = $("#total");
+		if (onNum === 2) {
+			$total.text(num2);
 		} else {
-			if (num1 && num2) {
-				
-			}
-			currentOp = thisValue;
+			$total.text(num1);
 		}
-		console.log(total);
+	}
+	
+	var $num = $(".num");
+	var $op = $(".op");
+	
+	$num.click(function() {
+		var val = $(this).attr("id");
+		if (!num1) {
+			num1 = val;
+			onNum = 1;
+		} else if (onNum === 1) {
+			num1 += val;
+		} else if (onNum){
+			num2 += val;
+		} else {
+			num2 = val;
+			onNum = 2;
+		}
+		updateTotal();
+	})
+	
+	$op.click(function() {
+		var val = $(this).attr("id");
+		onNum = false;
+		if (currentOp) {
+			num1 = performOp(currentOp, num1, num2);
+			num2 = null;
+			currentOp = val;
+		} else {
+			currentOp = val;
+		}
+		updateTotal();
 	})
 });
