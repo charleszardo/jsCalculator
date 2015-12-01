@@ -2,7 +2,10 @@ $(document).ready(function(){
 	var currentOp = null;
 	var num1 = null;
 	var num2 = null;
+	// used to determine if number is being built
 	var onNum = null;
+	// used to repeatedly hit = sign and perform previous op
+	var eqStorage = [];
 	
 	function performOp(op, num1, num2) {
 		num1 = parseFloat(num1);
@@ -26,6 +29,8 @@ $(document).ready(function(){
 	
 	var $num = $(".num");
 	var $op = $(".op");
+	var $eq = $(".eq");
+	var $calc = $(".calc");
 	
 	$num.click(function() {
 		var val = $(this).attr("id");
@@ -46,12 +51,27 @@ $(document).ready(function(){
 	$op.click(function() {
 		var val = $(this).attr("id");
 		onNum = false;
-		if (currentOp) {
+		if (currentOp && num2) {
 			num1 = performOp(currentOp, num1, num2);
 			num2 = null;
 			currentOp = val;
 		} else {
 			currentOp = val;
+		}
+		updateTotal();
+	})
+	
+	$eq.click(function() {
+		if (num1 && num2 && currentOp) {
+			num1 = performOp(currentOp, num1, num2);
+			eqStorage = [num2, currentOp]
+			num2 = null;
+			onNum = false;
+			currentOp = null;
+		} else {
+			num = eqStorage[0];
+			op = eqStorage[1];
+			num1 = performOp(op, num1, num);
 		}
 		updateTotal();
 	})
