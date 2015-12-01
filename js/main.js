@@ -18,8 +18,26 @@ $(document).ready(function(){
 		}
 	}
 	
+	function allClear() {
+		currentOp = null;
+		num1 = null;
+		num2 = null;
+		onNum = null;
+		eqStorage = [];
+		$total.text(0)
+	}
+	
+	function clearEntry() {
+		if (!num1 || onNum === 1) {
+			num1 = null;
+		} else if (onNum === 2) {
+			num2 = null;
+		} else {
+			currentOp = null;
+		}
+	}
+	
 	function updateTotal() {
-		$total = $("#total");
 		if (onNum === 2) {
 			$total.text(num2);
 		} else {
@@ -27,10 +45,22 @@ $(document).ready(function(){
 		}
 	}
 	
+	var $total = $("#total");
 	var $num = $(".num");
 	var $op = $(".op");
 	var $eq = $(".eq");
 	var $calc = $(".calc");
+	var $ac = $("#ac");
+	var $ce = $("#ce");
+	
+	$ac.click(function() {
+		allClear();
+	})
+	
+	$ce.click(function() {
+		clearEntry();
+		updateTotal();
+	})
 	
 	$num.click(function() {
 		var val = $(this).attr("id");
