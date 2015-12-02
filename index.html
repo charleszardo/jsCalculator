@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
 	<section id="calculator">
+		<header>
+			<p>ELECTRONIC CALCULATOR</p>
+		</header>
 		<div>
 			<p id="total">0</p>
 		</div>
-		<ul class=calculator>
-			<li id="ac" class="clear">AC</li>
-			<li id="ce" class="clear">CE</li>
-			<li id="perc" class="other-op">%</li>
-			<li id="/" class="op">/</li>
-			<li id="7" class="num">7</li>
-			<li id="8" class="num">8</li>
-			<li id="9" class="num">9</li>
-			<li id="x" class="op">x</li>
-			<li id="4" class="num">4</li>
-			<li id="5" class="num">5</li>
-			<li id="6" class="num">6</li>
-			<li id="-" class="op">-</li>
-			<li id="1" class="num">1</li>
-			<li id="2" class="num">2</li>
-			<li id="3" class="num">3</li>
-			<li id="+" class="op">+</li>
-			<li id="0" class="num">0</li>
-			<li id="." class="num">.</li>
-			<li id="=" class="eq">=</li>
+		<div id="buttons">
+			<div class="row">
+				<div id="ac" class="clear button">AC</div>
+				<div id="ce" class="clear button">CE</div>
+				<div id="perc" class="other-op button">%</div>
+				<div id="/" class="op button">/</div>
+			</div>
+			<div class="row">
+				<div id="7" class="num button">7</div>
+				<div id="8" class="num button">8</div>
+				<div id="9" class="num button">9</div>
+				<div id="x" class="op button">x</div>
+			</div>
+			<div class="row">
+				<div id="4" class="num button">4</div>
+				<div id="5" class="num button">5</div>
+				<div id="6" class="num button">6</div>
+				<div id="-" class="op button">-</div>
+			</div>
+			<div class="row">
+				<div id="1" class="num button">1</div>
+				<div id="2" class="num button">2</div>
+				<div id="3" class="num button">3</div>
+				<div id="+" class="op button">+</div>
+			</div>
+			<div class="row">
+				<div id="0" class="num button">0</div>
+				<div id="." class="num button">.</div>
+				<div id="=" class="eq button">=</div>
+			</div>
 		</ul>
 	</section>
 </body>

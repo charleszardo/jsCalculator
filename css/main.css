@@ -1,0 +1,44 @@
+body {
+	background: #9B8F89;
+}
+
+header {
+	margin: 0 auto;
+	text-align: center;
+  text-transform: uppercase;
+  color: #969194;
+  font-family: 'Open Sans';
+  font-size: .7em;
+}
+
+#calculator {
+	width: 250px;
+	margin: 0 auto;
+	background: #F3EEE7;
+}
+
+#total {
+	width: 214px;
+	margin: 10px auto;
+	text-align: right;
+	background: #C7C7AF;
+	color: #545454;
+}
+
+#buttons {
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	width: 40px;
+	background: #3B3644;
+	color: #FFFFFF;
+	margin: 3px 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.clear {
+	background: #C44657;
+}
