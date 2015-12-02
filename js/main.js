@@ -45,6 +45,16 @@ $(document).ready(function(){
 		}
 	}
 	
+	function percent() {
+		if (onNum === 1) {
+			num1 = num1 / 100;
+		} else if (onNum === 2) {
+			num2 = num2 / 100;
+		} else {
+			// do nothing
+		}
+	}
+	
 	var $total = $("#total");
 	var $num = $(".num");
 	var $op = $(".op");
@@ -52,6 +62,7 @@ $(document).ready(function(){
 	var $calc = $(".calc");
 	var $ac = $("#ac");
 	var $ce = $("#ce");
+	var $perc = $("#perc")
 	
 	$ac.click(function() {
 		allClear();
@@ -103,6 +114,11 @@ $(document).ready(function(){
 			op = eqStorage[1];
 			num1 = performOp(op, num1, num);
 		}
+		updateTotal();
+	})
+	
+	$perc.click(function() {
+		percent();
 		updateTotal();
 	})
 });
