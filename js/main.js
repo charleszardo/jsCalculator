@@ -28,10 +28,14 @@ $(document).ready(function(){
 	}
 	
 	function clearEntry() {
-		if (!num1 || onNum === 1) {
+		if (!num1) {
+			// do nothing
+		} else if (onNum === 1) {
 			num1 = null;
+			onNum = false;
 		} else if (onNum === 2) {
 			num2 = null;
+			onNum = false;
 		} else {
 			currentOp = null;
 		}
