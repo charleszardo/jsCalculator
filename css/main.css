@@ -42,6 +42,14 @@ header {
 	text-align: center;
 }
 
+#add {
+	height: 48px;
+}
+
+#last-row {
+	margin-left: -54px;
+}
+
 .button {
 	display: inline-block;
 	width: 40px;
@@ -54,4 +62,8 @@ header {
 
 .clear {
 	background: #C44657;
+}
+
+.row {
+	height: 30px;
 }
