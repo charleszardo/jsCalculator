@@ -46,22 +46,30 @@ header {
 }
 
 #buttons {
-	text-align: center;
+/*	text-align: center;*/
 }
 
 #add {
-	height: 48px;
+	height: 46px;
+	padding: 22px 0 2px 0;
+	margin-top: 20px;
 }
 
 #last-row {
 	margin-left: -54px;
 }
 
+#plus-row {
+	margin-top: -15px;
+	margin-bottom: 20px;
+}
+
 .button {
 	font: 18px BlinkMacSystemFont;
+	padding: 5px 0 0 2px;
 	display: inline-block;
-	width: 40px;
-	height: 30px;
+	width: 38px;
+	height: 25px;
 	color: #FFFFFF;
 	margin: 3px 5px;
 	text-align: center;
