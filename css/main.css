@@ -13,9 +13,16 @@ header {
 
 #calculator {
 	width: 250px;
+	height: 290px;
 	margin: 0 auto;
 	background: #F3EEE7;
 	padding: 20px 20px;
+	border-top-left-radius: 80% 20px;
+  border-top-right-radius: 80% 20px;
+  border-bottom-left-radius: 80% 20px;
+  border-bottom-right-radius: 80% 20px;
+  box-shadow: inset 5px 0 10px -5px #635e61, inset -5px 0 10px -5px #635e61, inset 0px -5px 10px -2px #635e61, 0 0 1px 2px #635e61, 0 10px 20px 0 #494547;
+  text-align: center;
 }
 
 #screen {
@@ -51,19 +58,32 @@ header {
 }
 
 .button {
+	font: 18px BlinkMacSystemFont;
 	display: inline-block;
 	width: 40px;
-	background: #3B3644;
+	height: 30px;
 	color: #FFFFFF;
 	margin: 3px 5px;
 	text-align: center;
 	cursor: pointer;
+	border: 1px solid #4B4657;
+	border-top: 2px solid #7c748f;
+	background-image: linear-gradient(to bottom, #4B4657, #332f3b);
+  border-radius: 20%;
+	border-top-left-radius: 80% 10px;
+  border-top-right-radius: 80% 10px;
+  border-bottom-left-radius: 100% 10px;
+	border-bottom-right-radius: 100% 10px;
+	box-shadow: inset 0 1px 4px #7c748f, inset 0 -4px 20px #332f3b, 0 3px 1px 0 #332f3b;
 }
 
 .clear {
-	background: #C44657;
+  border: 1px solid #CC4E5F;
+  border-top: 2px solid #e39da7;
+  background-image: linear-gradient(to bottom, #CC4E5F, #b33445);
+  box-shadow: inset 0 1px 4px #e39da7, inset 0 -4px 20px #b33445;
 }
 
 .row {
-	height: 30px;
+	height: 40px;
 }
