@@ -11,10 +11,10 @@ $(document).ready(function(){
 		num1 = parseFloat(num1);
 		num2 = parseFloat(num2);
 		switch (op) {
-			case "+": return num1 + num2;
-			case "-": return num1 - num2;
-			case "/": return num1 / num2;
-			case "x": return num1 * num2;
+			case "add": return num1 + num2;
+			case "subtract": return num1 - num2;
+			case "divide": return num1 / num2;
+			case "multiply": return num1 * num2;
 		}
 	}
 	
