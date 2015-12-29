@@ -1,11 +1,8 @@
 $(document).ready(function(){
-	var currentOp = null;
-	var num1 = null;
-	var num2 = null;
-	// used to determine if number is being built
-	var onNum = null;
-	// used to repeatedly hit = sign and perform previous op
-	var eqStorage = [];
+	// onNum is used to determine if number is being built
+	// eqStorage is used to repeatedly hit = sign and perform previous op
+	var currentOp, num1, num2, onNum,
+			eqStorage = [];
 	
 	function performOp(op, num1, num2) {
 		num1 = parseFloat(num1);
