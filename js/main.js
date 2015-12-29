@@ -13,7 +13,7 @@ $(document).ready(function(){
 			case "divide": return num1 / num2;
 			case "multiply": return num1 * num2;
 		}
-	}
+	}g
 	
 	function allClear() {
 		currentOp = null;
