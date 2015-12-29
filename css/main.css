@@ -62,7 +62,12 @@ header {
 
 #plus-row .num {
   vertical-align: top;
-  margin-top: 21px;
+  margin-top: 19px;
+}
+
+#last-row .button {
+  vertical-align: top;
+  margin-top: 1px;
 }
 
 .button {
@@ -86,11 +91,31 @@ header {
 	box-shadow: inset 0 1px 4px #7c748f, inset 0 -4px 20px #332f3b, 0 3px 1px 0 #332f3b;
 }
 
+.button:hover {
+	background-image: linear-gradient(to bottom, #4B4657, #332f3b);
+}
+
+.button:active {
+	background-image: linear-gradient(to bottom, #4B4657, #332f3b);
+	box-shadow: 0 3px #332f3b;
+	transform: translateY(3px);
+}
+
 .clear {
   border: 1px solid #CC4E5F;
   border-top: 2px solid #e39da7;
   background-image: linear-gradient(to bottom, #CC4E5F, #b33445);
   box-shadow: inset 0 1px 4px #e39da7, inset 0 -4px 20px #b33445;
+}
+
+.clear:hover {
+	background-image: linear-gradient(to bottom, #CC4E5F, #b33445);
+}
+
+.clear:active {
+	background-image: linear-gradient(to bottom, #CC4E5F, #b33445);
+	box-shadow: 0 3px #b33445;
+	transform: translateY(3px);
 }
 
 .row {
