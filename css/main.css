@@ -64,6 +64,11 @@ header {
 	margin-bottom: 20px;
 }
 
+#plus-row .num {
+  vertical-align: top;
+  margin-top: 21px;
+}
+
 .button {
 	font: 18px BlinkMacSystemFont;
 	padding: 5px 0 0 2px;
